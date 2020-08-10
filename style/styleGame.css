@@ -1,124 +1,74 @@
-/* - Spieldeld - */
 .game{
 	position: absolute;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	
-	background-image: url("../image/bg.svg");
-	background-position: center;
-	background-repeat: no-repeat;
+	background-image: url('../img/bg/bg.svg');
 	background-size: cover;
-}
-.info{
-	
+	background-repeat: no-repeat;
 }
 .header{
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 25%;
+	height: 50%; /*20%; bei Ingame*/
+	transition: 1s;
+	
+	z-index: 30;
 }
 .header img{
 	position: absolute;
-	height: 80%;
-	max-width: 80%;
+	height: 90%;
+	max-width: 100vw;
+	
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	
+}
+.action{
+	position: relative;
+	width: 100%;
+	height: 80%;
 }
 
 .field{
 	position: absolute;
-	height: 55%;
 	display: inline-block;
-	top: 30%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.info{
-	position: absolute;
-	width: 50%;
-	left: -5%;
-	top: 0px;
-	transform: translateX(-100%);
-}
-.info img{
-	position: absolute;
-	height: 80%;
+	width: 75vh;
+	max-width: 98%;
+	
 	top: 50%;
-	right: 2%;
-	transform: translateY(-50%);
-}
-
-.field .front{
-	height: 100%;
-	z-index: 10;
-	outline: #1B6683 solid 1.5vh;
-	z-index: 20;
-}
-
-.field .holder{
-	position: absolute;
-	width: 130%;
-	bottom: -1.5vh;
 	left: 50%;
-	transform: translate(-50%,50%);
-	z-index: -5;
+	transform: translate(-50%,-50%);
+	border-radius: 0.8vw;
+	border: solid #48562A 0.8vw;
+	background-color: #48562A;
+}
+.field .info{
+	position: absolute;
+	top: 10%;
+	left: 0px;
+	transform: translateX(-100%);
+	
+	height: 13%;
 }
 
-/* - Programmierung - */
-.sections, .coins{
-	position: absolute;
-	width: 100%;
+.field img{
 	height: 100%;
-	left:0px;
-	top: 0px;
 }
 
-.sections div{
-	position: relative;
-	float: left;
-	top: -16.66%;
-	height: 116.66%;
-	width: 14.28%;
-	
-	cursor: pointer;
-}
-/*selection Pfeil*/
-.sections div:hover img{
-	display: block;
-}
-.sections div img{
-	width: 100%;
-	top: 0px;
+.snake{
 	display: none;
-	
-	animation: selectionAnimation 0.4s ease-in infinite alternate;
-	transition: 0.2s;
 }
-@keyframes selectionAnimation{
-	100%{
-		transform: translateY(10%);
-	}
-}
-/*Coin*/
-.coins{
-	z-index:-1;
-}
-.coins img{
+.snake img,#apple{
 	position: absolute;
-	width: 14.28%;
-	top: 0%;
-	left: 0%;
-	transform: scale(1.01);
-	transition: 1s;
-	
-	animation: placeAnimation linear;
-	animation-duration: 0.5s;
+	width: calc(8.33% + 2px);
+	height: calc(8.33% + 2px);
 }
-@keyframes placeAnimation{
-	0%{
-		top: 0%;
-	}
+.snake img{
+	top: 41.66%;
+	transition: var(--snakeSpeed);
+	transition-timing-function: linear;
+}
+#apple{
+	left: 200%;
 }

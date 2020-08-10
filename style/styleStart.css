@@ -1,107 +1,74 @@
 .startScreen{
+	z-index: 25;
 	position: absolute;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	top: 0;
 	
-	background-image: url("../image/startScreen/bg.svg");
-	background-color: #6793A0;
-	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../img/start/bg.svg);
 	
 	transition: 0.8s;
-	z-index: 60;
 }
-.headerStart{
+.startMenu{
 	position: absolute;
 	width: 100%;
-	height: 40%;
+	height: 50%;
+	bottom: 0;
+}
+.chooseSnake{
+	position: absolute;
+	width: 100%;
+	height: 60%;
 	top: 0;
-	left: 0;
 }
-.headerStart img{
+.snakeFrame{
 	position: absolute;
-	height: 85%;
-	max-width: 90%;
+	height: 80%;
+	left: 50%;
 	top: 50%;
-	left: 50%;
 	transform: translate(-50%,-50%);
-}
-
-.settings{
-	position: absolute;
-	width: 100%;
-	height: 50%;
-	top: 40%;
-}
-
-/* -Input- */
-.inputFrame{
-	position: relative;
-	width: 100%;
-	height: 50%;
-}
-.input{
-	position: absolute;
-	height: 35%;
-	top: 3%;
-	display: inline-block;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.input img{
-	height: 100%;
-	min-width: 90%;
-}
-.input input{
-	position: absolute;
-	top: 33%;
-	left: 34%;
-	font-size: 3vh;
-	
-	border: none transparent;
-	outline: none;
-	background-color: transparent;
-	color: #165366;
-	
-	 -moz-appearance: textfield;
-}
-
-
-/* -colorSelection- */
-.colorSelection{
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translateX(-50%);
-	
-	height: 45%;
 	display: inline-block;
 }
-.colorSelection img{
-	position: relative;
+
+.snakeFrame img{
 	height: 100%;
-	transform: scale(0.75);
+	max-width: 60vw;
+}
+.snakeFrame i{
+	top: 50%;
+	position: absolute;
+	font-size: 20vh;
+	color: #48562A;
 	
 	transition: 0.2s;
+}
+.snakeFrame i:hover{
 	cursor: pointer;
+	color: #83AE57;
 }
-.colorSelection img:hover{
-	transform: scale(1);
+#chooseLeft{
+	left: -10%;
+	transform: translate(-100%,-50%);
 }
-.colorSelection .selected, .colorSelection .selected:hover{
-	cursor: default;
-	transform: scale(1.2);
+#chooseRight{
+	right: -10%;
+	transform: translate(100%,-50%);
 }
 
+.triggerStart{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
 .startScreen h2{
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	bottom: 3%;
-	font-size: 5vh;
-	color: #1B7794;
+	bottom: 10%;
+	font-size: 8vh;
+	color: #48562A;
 	
 	cursor: pointer;
 	animation: continueAnimation 1s ease-in-out infinite alternate;
