@@ -44,5 +44,9 @@ function startGame(){
 	changePlayer();
 	
 	//Hide Screen
+	
 	startScreen.style.top = "-100%";
+	setTimeout(() => { 
+		startScreen.style.display = "none";
+	}, 800);
 }

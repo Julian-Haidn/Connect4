@@ -1,0 +1,67 @@
+@media screen and (max-width: 1000px){
+	/* --- Start --- */
+	.headerStart{
+		height:25%;
+	}
+	.headerStart img{
+		max-width: 95%;
+	}
+	
+	.settings{
+		top: 30%;
+	}
+	.input{
+		height: auto;
+		width: 90%;
+	}
+	.input input{
+		font-size: 5vw;
+	}
+	.colorSelection{
+		height: auto;
+		width: 100%;
+	}
+	.colorSelection img{
+		width: 16%;
+	}
+	
+	.colorSelection img:hover{
+	transform: scale(0.75);
+}
+	
+	.startScreen h2{
+		font-size: 7vw;
+	}
+	
+	/* --- Game --- */
+	.header img{
+		max-width: 95%;
+	}
+	.field{
+		width: 85%;
+		height: auto;
+		
+		top: 45%;
+		transform: translateX(-50%);
+		
+	}
+	.field .front{
+		outline: #1B6683 solid 1.5vw;
+	}
+	.field .holder{
+		bottom: -1.5vw;
+		width: 115%;
+	}
+	
+	.info{
+		width: 60%;
+		top: -17%;
+		left: 0;
+		transform: translateY(-100%);
+	}
+	.sections div img{
+		display: block;
+		animation: none;
+		opacity: 0.6;
+	}
+}

@@ -49,8 +49,8 @@ var currentPlayer = 1;
 
 var colors = ["green", "red", "orange", "pink", "cyan", "blue"];
 var playerArr = [
-	["Julian","red",],
-	["Katharina","orange",],
+	["Player 1","red",],
+	["Player 2","orange",],
 ];
 
 var playerColor = "green";

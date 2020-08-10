@@ -56,7 +56,6 @@ function changePlayer(){
 }
 
 function showWinScreen(winner){
-	sections.style.display = "none";
 	coinField.style.zIndex = 30;
 	
 	//Coins färben und vergrößern
