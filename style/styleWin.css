@@ -1,0 +1,50 @@
+.end{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	display: none;
+	opacity: 0;
+	
+	background-color: rgba(0,0,0,0.3);
+	
+	z-index: 30;
+	transition: 1s;
+}
+
+.end h2{
+	position: relative;
+	padding: 1% 0;
+	width: 100%;
+	text-align: center;
+	top:50%;
+	transform: translateY(-50%);
+	
+	color:#F5F5F5;
+	font-size: 7em;
+	background-color: rgba(0,0,0,0.5);
+}
+.end a{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 20%;
+	
+	color:#F5F5F5;
+	font-size: 5em;
+	text-decoration: none;
+	transition: 0.2s;
+	
+	animation: reloadAniamtion 1s ease-in-out infinite alternate;
+}
+.end a:hover{
+	cursor: pointer;
+	color:#4093AD;
+}
+
+@keyframes reloadAniamtion{
+	to{
+		transform: scale(0.92);
+	}
+}
